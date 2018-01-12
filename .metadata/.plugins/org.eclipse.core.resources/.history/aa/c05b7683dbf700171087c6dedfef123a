@@ -1,0 +1,47 @@
+import java.util.ArrayList;
+
+public class SelfDriving {
+	public static ArrayList<Integer> selfDividingNum(int first, int last) {
+		 ArrayList<Integer> result = new ArrayList<Integer>();
+		 for(int i= first; i<= last; i++) {
+ 
+			 if(selfDividing(i)){
+			 result.add(i);
+			 }
+		 }
+
+		 return result;
+	}
+	
+	public static boolean selfDividing(int num) {
+		Boolean flag = null;
+		while(num>0) {
+			int digit = num % 10;
+			if(num%digit != 0)
+			{
+				flag = false;
+				return flag;
+			}
+			else {
+				num = num/10;
+				flag = true;
+			}
+		
+	}
+		return flag;
+	}
+	
+	public static void main(String[] args) {
+		int first = 11;
+		int last = 15;
+		long startTime = System.currentTimeMillis();	
+		ArrayList<Integer> result = selfDividingNum(first,last);
+		long endTime = System.currentTimeMillis();	
+
+		System.out.print(result);
+		System.out.println("Time complexity of 1st method : " +(endTime-startTime));
+		
+	}
+		
+	
+}

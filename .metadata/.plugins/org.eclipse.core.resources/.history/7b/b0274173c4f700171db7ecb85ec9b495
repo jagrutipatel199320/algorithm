@@ -1,0 +1,13 @@
+
+public class Anagram {
+	public static int[] anagram(int[] a,int[] b) {
+		int result[] = new int[a.length];
+		
+		return result;
+	}
+	public static void main(String[] args) {
+		int a[] = {3,2,1};
+		int b[] = {2,1,3};
+		anagram(a,b);
+	}
+}

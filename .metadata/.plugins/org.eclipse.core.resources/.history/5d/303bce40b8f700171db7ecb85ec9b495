@@ -1,0 +1,11 @@
+
+public class ReverseNumber {
+
+	public static void main(String[] args) {
+		
+		int number = 312;
+		reverse(number);
+		
+	}
+	
+}

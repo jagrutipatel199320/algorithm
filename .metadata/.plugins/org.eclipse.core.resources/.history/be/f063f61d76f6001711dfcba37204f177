@@ -1,0 +1,71 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+public class TwoSum {
+
+	public static ArrayList<Integer> twoSum(int[] num, int target) {
+		 ArrayList<Integer> result = new ArrayList<Integer>();
+		for(int i = 0;i<num.length;i++) {
+			for(int j = i+1;j<num.length;j++) {
+				if(num[j] == (target - num[i])) {
+					result.add(num[i]);
+					result.add(num[j]);
+				}
+			}
+		}
+		return result;
+	}
+	
+	
+	public static ArrayList<Integer> twoSum1(int[] num, int target) {
+		Map<Integer,Integer> map = new HashMap<>();
+		 ArrayList<Integer> result = new ArrayList<Integer>();
+
+		for(int i = 0; i< num.length; i++) {
+			map.put(num[i],i);
+			
+		}
+		
+		for(int i = 0; i <num.length; i ++) {
+			int complement = target - num[i];
+			if(map.containsKey(complement) && map.get(complement) != i) {
+				result.add(complement);
+				//result.add(num[i]);
+			}
+		}
+		return result;
+	}
+	
+	public static ArrayList<Integer> twoSum2(int[] num, int target) {
+		Map<Integer,Integer> map = new HashMap<>();
+		 ArrayList<Integer> result = new ArrayList<Integer>();
+
+		
+		for(int i = 0; i <num.length; i ++) {
+			int complement = target - num[i];
+			if(map.containsKey(complement) && map.get(complement) != i) {
+				result.add(complement);
+				result.add(num[i]);
+			}
+			map.put(num[i], i);
+		}
+		return result;
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int arr[] = {2,5,7,1};
+		int target = 6;
+		//ArrayList<Integer> result = twoSum(arr,target);
+		//System.out.print(result);
+		
+		//ArrayList<Integer> result1 = twoSum1(arr,target);
+		//System.out.print(result1);
+		
+		ArrayList<Integer> result2 = twoSum2(arr,target);
+		System.out.print(result2);
+		
+
+	}
+
+}

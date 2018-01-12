@@ -1,0 +1,36 @@
+import java.util.ArrayList;
+
+public class SelfDriving {
+	public static ArrayList<Integer> selfDividingNum(int first, int last) {
+		 ArrayList<Integer> result = new ArrayList<Integer>();
+		 for(int i= first; i<= last; i++) {
+			 result.add(selfDividing(i));
+		 }
+		 return result;
+	}
+	
+	public static boolean selfDividing(int num) {
+		Boolean flag = null;
+		while(num>0) {
+			int digit = num % 10;
+			if(digit != 0 && num%digit != 0)
+			{
+				flag = false;
+			}
+			else {
+				num = num/10;
+				flag = true;
+			}
+		
+	}
+	}
+	
+	public static void main(String[] args) {
+		int first = 10;
+		int last = 30;
+		ArrayList<Integer> result = selfDividingNum(first,last);
+		System.out.print(result);
+	}
+		
+	
+}

@@ -1,0 +1,21 @@
+import java.math.*;
+public class ReverseNumber {
+	
+	public static int reverse(int num) {
+		int rnum = 0;
+		while(abs(num) > 0) {
+		int digit = num%10;
+		rnum = rnum*10 + digit;
+		num = num/10;
+		}
+		return rnum;
+	}
+	public static void main(String[] args) {
+		
+		int number = 312;
+		int result =reverse(number);
+		System.out.print(result);
+		
+	}
+	
+}
