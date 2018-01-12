@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;SelfDriving&apos; to &apos;SelfDividing&apos;&#x0D;&#x0A;- Original project: &apos;Problems&apos;&#x0D;&#x0A;- Original element: &apos;SelfDriving&apos;&#x0D;&#x0A;- Renamed element: &apos;SelfDividing&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;SelfDriving&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;{SelfDriving.java[SelfDriving" matchStrategy="1" name="SelfDividing" qualified="false" references="true" similarDeclarations="false" stamp="1515794826387" textual="false" version="1.0"/>
+</session>
